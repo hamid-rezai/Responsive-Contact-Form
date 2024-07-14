@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h2 id="title">Contact Us</h2>
+        <form action="" id="form">
+          <div class="first-last">
+            <div class="form-group">
+              <label for="first-name">
+                <span class="necessary">First Name</span>
+              </label>
+              <input type="text" name="first-name" id="first-name" />
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">
+                <span class="necessary">Last-Name</span>
+              </label>
+              <input type="text" name="last-name" id="last-name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email"> <span class="necessary">Email</span> </label>
+            <input type="text" name="email" id="email" />
+          </div>
+
+          <div class="form-group">
+            <div class="query-details">
+              <span class="query-title">
+                <span class="necessary">Query Type</span></span
+              >
+              <div class="category">
+                <label for="">
+                  <span id="first-dot" class="dot one"></span>
+                  <span class="option">General Enquiry</span>
+                </label>
+                <label for="">
+                  <span id="second-dot" class="dot one"></span>
+                  <span class="option">Support Request</span>
+                </label>
+              </div>
+            </div>
+            <br />
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              <span class="necessary">Message</span>
+            </label>
+            <textarea name="message" id="message" cols="45" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="term">
+              <div class="box"></div>
+              <span class="necessary"
+                >I consent to being contacted by the team
+              </span>
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

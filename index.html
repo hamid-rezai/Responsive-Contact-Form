@@ -9,6 +9,12 @@
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,69 +24,133 @@
     <title>Contact Form</title>
   </head>
   <body>
-    <div id="container">
-      <div class="form-wrap">
-        <h2 id="title">Contact Us</h2>
-        <form action="" id="form">
-          <div class="first-last">
-            <div class="form-group">
-              <label for="first-name">
-                <span class="necessary">First Name</span>
-              </label>
-              <input type="text" name="first-name" id="first-name" />
-            </div>
-
-            <div class="form-group">
-              <label for="last-name">
-                <span class="necessary">Last-Name</span>
-              </label>
-              <input type="text" name="last-name" id="last-name" />
-            </div>
-          </div>
-
+    <div class="animate__animated animate__bounce scard" id="scard">
+      <div class="layout">
+        <i class="fa-solid fa-circle-check"></i>
+        <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form, we will be in touch soon!</p>
+    </div>
+    <main class="card">
+      <div class="form-wraper">
+        <h1 class="header-text">Contact Us</h1>
+        <form id="contact-form">
           <div class="form-group">
-            <label for="email"> <span class="necessary">Email</span> </label>
-            <input type="text" name="email" id="email" />
-          </div>
-
-          <div class="form-group">
-            <div class="query-details">
-              <span class="query-title">
-                <span class="necessary">Query Type</span></span
+            <div class="input-group">
+              <label for="first-name" class="label"
+                >First Name <span class="asterik">*</span></label
               >
-              <div class="category">
-                <label for="">
-                  <span id="first-dot" class="dot one"></span>
-                  <span class="option">General Enquiry</span>
+              <input
+                aria-describedby="first-name-error"
+                autocomplete="off"
+                type="text"
+                class="input"
+                id="first-name"
+                name="first-name" />
+              <p class="error-text" id="first-name-error" role="alert">
+                This feild is required
+              </p>
+            </div>
+
+            <div class="input-group">
+              <label for="last-name" class="label"
+                >Last Name <span class="asterik">*</span></label
+              >
+              <input
+                aria-describedby="last-name-error"
+                autocomplete="off"
+                type="text"
+                class="input"
+                id="last-name"
+                name="last-name" />
+              <p class="error-text" id="last-name-error" role="alert">
+                This feild is required
+              </p>
+            </div>
+          </div>
+          <div class="email-input">
+            <label for="email" class="label"
+              >Email Address <span class="asterik">*</span></label
+            >
+            <input
+              aria-describedby="email-error"
+              autocomplete="off"
+              type="text"
+              id="email"
+              class="input"
+              name="email"
+              style="width: 100% !important" />
+            <p class="error-text" id="email-error" role="alert">
+              Please enter a valid email address
+            </p>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <label class="label">
+                Query Type <span class="asterik">*</span>
+              </label>
+              <div class="radio-group">
+                <input
+                  aria-describedby="radio-error"
+                  type="radio"
+                  class="radio-input"
+                  name="radio-group"
+                  id="radio1" />
+                <label class="radio-label" for="radio1">
+                  <span class="radio-inner-circle"></span>
+                  General Enquiry
                 </label>
-                <label for="">
-                  <span id="second-dot" class="dot one"></span>
-                  <span class="option">Support Request</span>
+
+                <input
+                  aria-describedby="radio-error"
+                  type="radio"
+                  class="radio-input"
+                  name="radio-group"
+                  id="radio2" />
+                <label for="radio2" class="radio-label">
+                  <span class="radio-inner-circle"></span>
+                  Support Request
                 </label>
               </div>
+              <p class="error-text" id="radio-error" role="alert">
+                Please select a query type
+              </p>
             </div>
-            <br />
           </div>
-
-          <div class="form-group">
-            <label for="message">
-              <span class="necessary">Message</span>
+          <div class="input-group">
+            <label for="message" class="label">
+              Message <span class="asterik">*</span>
             </label>
-            <textarea name="message" id="message" cols="45" rows="5"></textarea>
+            <textarea
+              aria-describedby="message-error"
+              name="message"
+              id="message"
+              class="input textarea"></textarea>
+            <p class="error-text" id="message-error" role="alert">
+              This field is required
+            </p>
           </div>
-
-          <div class="form-group">
-            <div class="term">
-              <div class="box"></div>
-              <span class="necessary"
-                >I consent to being contacted by the team
+          <div class="checkbox-wrapper-46">
+            <input
+              aria-describedby="consent-error"
+              type="checkbox"
+              class="inp-cbx"
+              id="cbx-46" />
+            <label for="cbx-46" class="cbx">
+              <span></span>
+              <span style="font-size: 0.9rem">
+                I consent to be contacted by the team
               </span>
-            </div>
+              <span class="asterik">*</span>
+              <p class="error-text" id="consent-error" role="alert">
+                To submit this form, please consent to be contacted
+              </p>
+            </label>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" class="btn" id="submit-btn">Submit</button>
         </form>
       </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
